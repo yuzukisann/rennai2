@@ -9,6 +9,29 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="h8T-sN-4K0">
+            <objects>
+                <viewController id="dp4-IX-lnZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WQK-yk-eL2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxJ-1l-r1y">
+                                <rect key="frame" x="170" y="551" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jHB-u5-Kly"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3L7-jK-VcR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-655" y="3"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="rennai2" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,23 +67,79 @@
                                 <color key="progressTintColor" systemColor="systemPinkColor"/>
                                 <color key="trackTintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUT-bU-48s">
+                                <rect key="frame" x="48" y="119" width="329" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNC-ze-nVB">
+                                <rect key="frame" x="43" y="405" width="329" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQ5-6u-CXL">
+                                <rect key="frame" x="43" y="256" width="329" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="name" destination="j94-WT-CJP" id="Brh-Zy-l87"/>
-                        <outlet property="testProgressView" destination="m8o-LB-GLS" id="m7u-D3-eOJ"/>
-                        <outlet property="text" destination="sum-3l-tSj" id="21y-RU-hk5"/>
+                        <outlet property="button1" destination="JUT-bU-48s" id="DoH-6F-HAN"/>
+                        <outlet property="button2" destination="cQ5-6u-CXL" id="FJf-Wf-S7Z"/>
+                        <outlet property="button3" destination="KNC-ze-nVB" id="6Cl-XO-BHh"/>
+                        <outlet property="name" destination="j94-WT-CJP" id="b5f-jf-Q7E"/>
+                        <outlet property="testProgressView" destination="m8o-LB-GLS" id="fJX-Mx-fS7"/>
+                        <outlet property="text" destination="sum-3l-tSj" id="7Sd-hD-Gex"/>
+                        <segue destination="LLp-wv-eS7" kind="presentation" identifier="toending" modalPresentationStyle="fullScreen" id="37R-R0-A4g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="101.44927536231884" y="3.3482142857142856"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="ljI-OO-nCW">
+            <objects>
+                <viewController id="LLp-wv-eS7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AY9-Zq-yOz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="haikei3" translatesAutoresizingMaskIntoConstraints="NO" id="HMB-gC-Ubx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yiG-F1-egL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fGe-sP-4BL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895.6521739130435" y="2.6785714285714284"/>
+        </scene>
     </scenes>
     <resources>
         <image name="haikei2" width="1043" height="2079"/>
+        <image name="haikei3" width="1043" height="2079"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
