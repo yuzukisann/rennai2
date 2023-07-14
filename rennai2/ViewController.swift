@@ -42,12 +42,18 @@ class ViewController: UIViewController {
         
         testProgressView.transform = CGAffineTransformMakeScale(1.0, 5.0)
         
+      
+     
+        
     }
+    
+   
+   
+    
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         
-       
         
         var arraycount = story.himariserihu.count - 1
         
@@ -63,7 +69,7 @@ class ViewController: UIViewController {
                 selectButton()
                 
             default: print("error")
-                
+              
             }
         }
         
@@ -72,6 +78,9 @@ class ViewController: UIViewController {
         }
        
     }
+    
+  
+    
     
     func selectButton() {
         
@@ -131,8 +140,9 @@ class ViewController: UIViewController {
             button1.setTitle(story.tanakatakai[7], for: .normal )
             button2.setTitle(story.tanakahutuu[7], for: .normal )
             button3.setTitle(story.tanakahikui[7], for: .normal )
-        } 
+        }
         
+       
         
         
     }
