@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     
     var number: Int = 0
     
+    @IBOutlet var koukanndo: UIProgressView!
     
     @IBOutlet var testProgressView: UIProgressView!
     
@@ -25,14 +26,31 @@ class ViewController: UIViewController {
     
     @IBOutlet var button3: UIButton!
     
-  
+    
+    
+    
     let story = Story()
     
-  
+    func arraycout() {
+        
+        var arraycount1 = story.himaritakai.count - 1
+        var arraycount2 = story.himarihutuu.count - 1
+        var arraycount3 = story.himarihikui.count - 1
+        
+        if arraycount1 == number {
+            self.performSegue(withIdentifier: "toending", sender: nil)
+        } else if arraycount2 == number {
+            self.performSegue(withIdentifier: "toending", sender: nil)
+        } else if arraycount3 == number {
+            self.performSegue(withIdentifier: "toending", sender: nil)
+        }
+    }
+    
+    
     
     override func viewDidLoad(){
         super.viewDidLoad()
-      
+        
         button1.isHidden = true
         button2.isHidden = true
         button3.isHidden = true
@@ -42,20 +60,18 @@ class ViewController: UIViewController {
         
         testProgressView.transform = CGAffineTransformMakeScale(1.0, 5.0)
         
-      
-     
+        
+        
         
     }
     
-   
-   
+    
+    
     
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
         
-        
-        var arraycount = story.himaritakai.count - 1
         
         
         
@@ -71,36 +87,42 @@ class ViewController: UIViewController {
                 selectButton()
                 
             default: print("error")
-              
+                
             }
         }
         
-        if arraycount == number {
-            self.performSegue(withIdentifier: "toending", sender: nil)
-        }
         
         
-    
-       
+        
+        
+        
     }
+    
+
     
     
     @IBAction func end100() {
         number += 1
         text.text = story.himaritakai[number]
+        koukanndo.setProgress(koukanndo.progress + 0.1, animated:  true)
         button1.isHidden = true
         button2.isHidden = true
         button3.isHidden = true
+        selectButton()
+        arraycout()
         
     }
     
-  
+    
     @IBAction func end50() {
         number += 1
         text.text = story.himarihutuu[number]
+        koukanndo.setProgress(koukanndo.progress + 0.05, animated:  true)
         button1.isHidden = true
         button2.isHidden = true
         button3.isHidden = true
+        selectButton()
+        arraycout()
         
         
     }
@@ -108,9 +130,12 @@ class ViewController: UIViewController {
     @IBAction func end0() {
         number += 1
         text.text = story.himarihikui[number]
+        koukanndo.setProgress(koukanndo.progress - 0.2, animated:  true)
         button1.isHidden = true
         button2.isHidden = true
         button3.isHidden = true
+        selectButton()
+        arraycout()
         
         
     }
@@ -167,19 +192,13 @@ class ViewController: UIViewController {
             button1.setTitle(story.tanakatakai[6], for: .normal )
             button2.setTitle(story.tanakahutuu[6], for: .normal )
             button3.setTitle(story.tanakahikui[6], for: .normal )
-        } else if number == 8 {
-            button1.isHidden = false
-            button2.isHidden = false
-            button3.isHidden = false
-            button1.setTitle(story.tanakatakai[7], for: .normal )
-            button2.setTitle(story.tanakahutuu[7], for: .normal )
-            button3.setTitle(story.tanakahikui[7], for: .normal )
         }
         
-       
+        
         
         
     }
     
+    
+    
 }
-

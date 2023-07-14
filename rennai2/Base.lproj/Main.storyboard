@@ -73,7 +73,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="m8o-LB-GLS">
+                            <progressView opaque="NO" contentMode="scaleAspectFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="m8o-LB-GLS">
                                 <rect key="frame" x="165" y="69" width="229" height="5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="progressTintColor" systemColor="systemPinkColor"/>
@@ -89,7 +89,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="end100" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ffl-48-loP"/>
+                                    <action selector="end100" destination="BYZ-38-t0r" eventType="touchUpInside" id="eQu-mw-X5K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNC-ze-nVB">
@@ -102,7 +102,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="end0" destination="BYZ-38-t0r" eventType="touchUpInside" id="5GF-yj-lh2"/>
+                                    <action selector="end0" destination="BYZ-38-t0r" eventType="touchUpInside" id="IRR-zj-nRB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQ5-6u-CXL">
@@ -115,18 +115,26 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="end50" destination="BYZ-38-t0r" eventType="touchUpInside" id="YGG-gf-8XV"/>
+                                    <action selector="end50" destination="BYZ-38-t0r" eventType="touchUpInside" id="jEV-uN-z7f"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="❤️" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rG3-oU-8Jq">
+                                <rect key="frame" x="132" y="45" width="48" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="cGW-47-3NV"/>
                     <connections>
-                        <outlet property="button1" destination="JUT-bU-48s" id="DoH-6F-HAN"/>
-                        <outlet property="button2" destination="cQ5-6u-CXL" id="afO-is-5Ay"/>
-                        <outlet property="button3" destination="KNC-ze-nVB" id="4Lc-ep-2WZ"/>
+                        <outlet property="button1" destination="JUT-bU-48s" id="qFe-24-AeG"/>
+                        <outlet property="button2" destination="cQ5-6u-CXL" id="5y9-HJ-M8Y"/>
+                        <outlet property="button3" destination="KNC-ze-nVB" id="M1C-VP-PKt"/>
+                        <outlet property="koukanndo" destination="m8o-LB-GLS" id="HHy-zR-wMA"/>
                         <outlet property="name" destination="j94-WT-CJP" id="b5f-jf-Q7E"/>
                         <outlet property="testProgressView" destination="m8o-LB-GLS" id="fJX-Mx-fS7"/>
                         <outlet property="text" destination="sum-3l-tSj" id="7Sd-hD-Gex"/>
