@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         button3.isHidden = true
         text.isUserInteractionEnabled = true
         text.tag = 1
-        text.text = story.himariserihu[number]
+        text.text = story.himaritakai[number]
         
         testProgressView.transform = CGAffineTransformMakeScale(1.0, 5.0)
         
@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         super.touchesEnded(touches, with: event)
         
         
-        var arraycount = story.himariserihu.count - 1
+        var arraycount = story.himaritakai.count - 1
         
         
         
@@ -64,8 +64,10 @@ class ViewController: UIViewController {
             
             switch tag {
             case 1:
-                number += 1
-                text.text = story.himariserihu[number]
+                if number == 0 || number == 2 {
+                    number += 1
+                }
+                text.text = story.himaritakai[number]
                 selectButton()
                 
             default: print("error")
@@ -76,10 +78,42 @@ class ViewController: UIViewController {
         if arraycount == number {
             self.performSegue(withIdentifier: "toending", sender: nil)
         }
+        
+        
+    
        
     }
     
+    
+    @IBAction func end100() {
+        number += 1
+        text.text = story.himaritakai[number]
+        button1.isHidden = true
+        button2.isHidden = true
+        button3.isHidden = true
+        
+    }
+    
   
+    @IBAction func end50() {
+        number += 1
+        text.text = story.himarihutuu[number]
+        button1.isHidden = true
+        button2.isHidden = true
+        button3.isHidden = true
+        
+        
+    }
+    
+    @IBAction func end0() {
+        number += 1
+        text.text = story.himarihikui[number]
+        button1.isHidden = true
+        button2.isHidden = true
+        button3.isHidden = true
+        
+        
+    }
     
     
     func selectButton() {
