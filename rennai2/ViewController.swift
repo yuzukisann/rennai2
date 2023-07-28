@@ -17,14 +17,12 @@ class ViewController: UIViewController {
     @IBOutlet var testProgressView: UIProgressView!
     
     @IBOutlet var name: UILabel!
-    
     @IBOutlet var text: UILabel!
     
     @IBOutlet var button1: UIButton!
-    
     @IBOutlet var button2: UIButton!
-    
     @IBOutlet var button3: UIButton!
+    
     
     
     
@@ -44,6 +42,7 @@ class ViewController: UIViewController {
         } else if arraycount3 == number {
             self.performSegue(withIdentifier: "toending", sender: nil)
         }
+        
     }
     
     
@@ -61,19 +60,18 @@ class ViewController: UIViewController {
         testProgressView.transform = CGAffineTransformMakeScale(1.0, 5.0)
         
         
-        
-        
+        name.text = "GM"
+
     }
     
     
+  
     
     
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
-        
-        
-        
+
         
         for touch in touches {
             let tag = touch.view!.tag
@@ -91,15 +89,7 @@ class ViewController: UIViewController {
             }
         }
         
-        
-        
-        
-        
-        
     }
-    
-
-    
     
     @IBAction func end100() {
         number += 1
@@ -108,6 +98,7 @@ class ViewController: UIViewController {
         button1.isHidden = true
         button2.isHidden = true
         button3.isHidden = true
+        name.text = "ひまり"
         selectButton()
         arraycout()
         
@@ -121,6 +112,7 @@ class ViewController: UIViewController {
         button1.isHidden = true
         button2.isHidden = true
         button3.isHidden = true
+        name.text = "ひまり"
         selectButton()
         arraycout()
         
@@ -134,6 +126,7 @@ class ViewController: UIViewController {
         button1.isHidden = true
         button2.isHidden = true
         button3.isHidden = true
+        name.text = "ひまり"
         selectButton()
         arraycout()
         
@@ -150,6 +143,7 @@ class ViewController: UIViewController {
             button1.setTitle(story.tanakatakai[0], for: .normal )
             button2.setTitle(story.tanakahutuu[0], for: .normal )
             button3.setTitle(story.tanakahikui[0], for: .normal )
+            name.text = "ひまり"
         } else if number == 2 {
             button1.isHidden = false
             button2.isHidden = false
@@ -157,6 +151,7 @@ class ViewController: UIViewController {
             button1.setTitle(story.tanakatakai[1], for: .normal )
             button2.setTitle(story.tanakahutuu[1], for: .normal )
             button3.setTitle(story.tanakahikui[1], for: .normal )
+            name.text = "ひまり"
         } else if number == 3 {
             button1.isHidden = false
             button2.isHidden = false
@@ -164,6 +159,7 @@ class ViewController: UIViewController {
             button1.setTitle(story.tanakatakai[2], for: .normal )
             button2.setTitle(story.tanakahutuu[2], for: .normal )
             button3.setTitle(story.tanakahikui[2], for: .normal )
+            name.text = "ひまり"
         } else if number == 4 {
             button1.isHidden = false
             button2.isHidden = false
@@ -171,6 +167,7 @@ class ViewController: UIViewController {
             button1.setTitle(story.tanakatakai[3], for: .normal )
             button2.setTitle(story.tanakahutuu[3], for: .normal )
             button3.setTitle(story.tanakahikui[3], for: .normal )
+            name.text = "ひまり"
         } else if number == 5 {
             button1.isHidden = false
             button2.isHidden = false
@@ -178,6 +175,7 @@ class ViewController: UIViewController {
             button1.setTitle(story.tanakatakai[4], for: .normal )
             button2.setTitle(story.tanakahutuu[4], for: .normal )
             button3.setTitle(story.tanakahikui[4], for: .normal )
+            name.text = "ひまり"
         } else if number == 6 {
             button1.isHidden = false
             button2.isHidden = false
@@ -185,6 +183,7 @@ class ViewController: UIViewController {
             button1.setTitle(story.tanakatakai[5], for: .normal )
             button2.setTitle(story.tanakahutuu[5], for: .normal )
             button3.setTitle(story.tanakahikui[5], for: .normal )
+            name.text = "ひまり"
         } else if number == 7 {
             button1.isHidden = false
             button2.isHidden = false
@@ -192,13 +191,22 @@ class ViewController: UIViewController {
             button1.setTitle(story.tanakatakai[6], for: .normal )
             button2.setTitle(story.tanakahutuu[6], for: .normal )
             button3.setTitle(story.tanakahikui[6], for: .normal )
+            name.text = "ひまり"
         }
-        
-        
         
         
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let intKoukando: Int = Int(koukanndo.progress * 100)
+
+ 
+                
+                if segue.identifier == "toending" {
+                    let nextView = segue.destination as! EndingViewController
+                    nextView.koukando = intKoukando
+                }
+       
+    }
     
 }
