@@ -1,10 +1,3 @@
-//
-//  EndingViewController.swift
-//  rennai2
-//
-//  Created by 高井佑月 on 2023/07/28.
-//
-
 import UIKit
 
 class EndingViewController: UIViewController {
@@ -15,6 +8,8 @@ class EndingViewController: UIViewController {
     var number: Int = 0
         
     @IBOutlet var label: UILabel!
+    @IBOutlet var name: UILabel!
+    
     
     
 
@@ -36,10 +31,12 @@ class EndingViewController: UIViewController {
         
     }
     
-    
-    
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
+        
+        let arraycount1 = story.end0.count - 1
+        let arraycount2 = story.end50.count - 1
+        let arraycount3 = story.end100.count - 1
         
         for touch in touches {
             let tag = touch.view!.tag
@@ -48,45 +45,53 @@ class EndingViewController: UIViewController {
             case 1:
                 if koukando >= 80 {
                     number += 1
-                    label.text = story.end100[number]
+                  
+                    namemethod()
+                    
+                    if arraycount3 + 1 == number {
+                        Thread.sleep(forTimeInterval: 1.0)
+                       self.performSegue(withIdentifier: "tolast", sender: nil)
+                   } else {
+                       label.text = story.end100[number]
+                   }
+                    
                 } else if koukando >= 40 {
                     number += 1
-                    label.text = story.end50[number]
+                    
+                    namemethod()
+                    
+                    if arraycount2 + 1 == number {
+                        Thread.sleep(forTimeInterval: 1.0)
+                       self.performSegue(withIdentifier: "tolast", sender: nil)
+                   } else {
+                       label.text = story.end50[number]
+                   }
                 } else {
                     number += 1
-                    label.text = story.end0[number]
+                    
+                    namemethod()
+                    
+                    if arraycount1 + 1 == number {
+                        Thread.sleep(forTimeInterval: 1.0)
+                        self.performSegue(withIdentifier: "tolast", sender: nil)
+                    } else {
+                        label.text = story.end0[number]
+                    }
                 }
             default: print("error")
             }
                         
             }
+        
           }
 
-        
+    func namemethod() {
+        if number % 2 == 0 {
+            name.text = "ﾀﾅｶ"
+        } else if number % 2 == 1 {
+            name.text = "ひまり"
+        }
+    }
+
 
     }
-    
-   
-    
-    
-        
-
-        // Do any additional setup after loading the view.
-    
-    
-    
-
-           
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-

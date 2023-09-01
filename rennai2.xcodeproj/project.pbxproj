@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		214E48802A98AD3200D41664 /* lastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 214E487F2A98AD3200D41664 /* lastViewController.swift */; };
 		21BB682A2A17840F00320EF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB68292A17840F00320EF1 /* AppDelegate.swift */; };
 		21BB682C2A17840F00320EF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB682B2A17840F00320EF1 /* SceneDelegate.swift */; };
 		21BB682E2A17840F00320EF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21BB682D2A17840F00320EF1 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		214E487F2A98AD3200D41664 /* lastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lastViewController.swift; sourceTree = "<group>"; };
 		21BB68262A17840F00320EF1 /* rennai2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rennai2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21BB68292A17840F00320EF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21BB682B2A17840F00320EF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				21BB682B2A17840F00320EF1 /* SceneDelegate.swift */,
 				21BB682D2A17840F00320EF1 /* ViewController.swift */,
 				21BB682F2A17840F00320EF1 /* Main.storyboard */,
+				214E487F2A98AD3200D41664 /* lastViewController.swift */,
 				21BB68322A17841100320EF1 /* Assets.xcassets */,
 				21BB68342A17841100320EF1 /* LaunchScreen.storyboard */,
 				21BB68372A17841100320EF1 /* Info.plist */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				214E48802A98AD3200D41664 /* lastViewController.swift in Sources */,
 				21F358742A73C25600664E04 /* EndingViewController.swift in Sources */,
 				21BB682E2A17840F00320EF1 /* ViewController.swift in Sources */,
 				21BB682A2A17840F00320EF1 /* AppDelegate.swift in Sources */,
